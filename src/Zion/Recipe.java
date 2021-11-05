@@ -4,6 +4,7 @@ public class Recipe implements Cloneable{
     String recipeName;
     String ingredients;
     String instructions;
+    int prepTime;
     int cookTime;
     int servings;
 
@@ -16,10 +17,11 @@ public class Recipe implements Cloneable{
     }
 
 
-    public Recipe(String recipeName, String ingredients, String instructions, int cookTime, int servings) {
+    public Recipe(String recipeName, String ingredients, String instructions,int prepTime, int cookTime, int servings) {
         this.recipeName = recipeName;
         this.ingredients = ingredients;
         this.instructions = instructions;
+        this.prepTime = prepTime;
         this.cookTime = cookTime;
         this.servings = servings;
     }
@@ -62,6 +64,14 @@ public class Recipe implements Cloneable{
 
     public void setServings(int servings) {
         this.servings = servings;
+    }
+
+    public int getPrepTime() {
+        return prepTime;
+    }
+
+    public void setPrepTime(int prepTime) {
+        this.prepTime = prepTime;
     }
 
     @Override
