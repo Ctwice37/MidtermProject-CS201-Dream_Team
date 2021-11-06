@@ -26,15 +26,21 @@ public class JavaTube {
 
 
 
-        public void printByIngredientList(){                                                                //Local Inner Class
-             class sortByIngredientList implements Comparator<CookingVideo> {
+        public void printByIngredientList(CookingVideo[] cookingVideos) {                                       //Local Inner Class
 
+            class sortByIngredientList implements Comparator<CookingVideo> {
                 @Override
-                public int compare(CookingVideo o1, CookingVideo o2) {
-                    return o1.getIngredientsList().length - o2.getIngredientsList().length;
+                    public int compare (CookingVideo o1, CookingVideo o2){
+                        return o1.getIngredientsList().length - o2.getIngredientsList().length;
+                    }
                 }
 
-            }sortByIngredientList sortByIngredientList = new sortByIngredientList();
+                sortByIngredientList a = new sortByIngredientList();
+
+                Arrays.sort(cookingVideos, a);
+            }
+
+
 
 
 
@@ -108,7 +114,9 @@ public class JavaTube {
         //////////////Local Inner Class -- Comparator Interface -- (SortBy_IngredientList) ////////////////////////
 
 
-        Arrays.sort(cookingVideos, printByI);
+        JavaTube j = new JavaTube();                        //MainClass
+
+       j.printByIngredientList(cookingVideos);
 
 
 
