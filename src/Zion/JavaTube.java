@@ -38,4 +38,18 @@ public class JavaTube {
         for(CookingVideo c : arr)
             System.out.println(c.getCookingRecipe());
     }
+
+    public static void main(String[] args) {
+
+        CookingVideo c1 = new CookingVideo();
+        GamingVideo g1 = new GamingVideo();
+
+
+        Video[] allVideos = new Video[10];
+        CookingVideo[] cookingVideos = new CookingVideo[10];
+        GamingVideo[] gamingVideos = new GamingVideo[10];
+
+        VideoList vl = new VideoList();
+        vl.add(c1);
+    }
 }

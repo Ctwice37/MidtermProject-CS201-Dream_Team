@@ -2,7 +2,7 @@ package Zion;
 
 import java.util.Comparator;
 
-public class mainMethod extends Video{
+public class mainMethod  VideoList{
 
     public static void main(String[] args) {
 
@@ -13,6 +13,8 @@ public class mainMethod extends Video{
         Video[] allVideos = new Video[10];
         CookingVideo[] cookingVideos = new CookingVideo[10];
         GamingVideo[] gamingVideos = new GamingVideo[10];
+
+
 
 
 
