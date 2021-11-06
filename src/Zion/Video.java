@@ -1,6 +1,6 @@
 package Zion;
 
-public class Video implements Comparable<Video>{
+public class Video extends VideoLists implements Comparable<Video>{
     String title;
     double durationInMinutes;
     int views;
@@ -86,9 +86,5 @@ public class Video implements Comparable<Video>{
                 "\nWatchTime: " + watchTime;
     }
 
-    public static void main(String[] args) {
-        Video v = new Video();
-        System.out.println(v);
-    }
 }
 

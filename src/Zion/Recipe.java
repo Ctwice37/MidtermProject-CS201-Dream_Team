@@ -1,12 +1,12 @@
 package Zion;
 
 public class Recipe implements Cloneable{
-    String recipeName;
-    String ingredients;
-    String instructions;
-    int prepTime;
-    int cookTime;
-    int servings;
+    private String recipeName;
+    private String ingredients;
+    private String instructions;
+    private int prepTime;
+    private int cookTime;
+    private int servings;
 
     public Recipe(){
         recipeName = "unknown";

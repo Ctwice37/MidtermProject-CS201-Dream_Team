@@ -1,6 +1,5 @@
 package Zion;
 
-import java.lang.reflect.Array;
 
 public class VideoList {
 
@@ -12,38 +11,34 @@ public class VideoList {
         this.size = 0;
     }
 
-    public void add(Video o){
-        if(videos[(size-1)] != null)
+    public void add(Video o) {
+        if (videos[(size - 1)] != null)
             resize();
-       for(int i = 0; i < this.size(); i++) {
-           if (videos[i] == null) {
-               videos[i] = o;
-               size++;
-           }
-       }
+        for (int i = 0; i < this.size(); i++) {
+            if (videos[i] == null) {
+                videos[i] = o;
+                size++;
+            }
+        }
     }
 
-    public int size(){
+    public int size() {
         return size;
     }
 
-    private Video[] resize(){
+    private Video[] resize() {
         Video[] v1 = new Video[videos.length * 2];
         int i = 0;
-        for(Video v : videos) {
+        for (Video v : videos) {
             v1[i] = v;
             i++;
         }
         return v1;
     }
-
-
-
-    @Override
-    public String toString() {
-        for(Video v : videos){
-            System.out.println(v + "\n-----------------------");
-        }
-
-    }
+//
+//    @Override
+//    public String toString() {
+//        for (Video v : videos)
+//            return v +"\n-----------------------";
+//}
 }
