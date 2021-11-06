@@ -1,6 +1,6 @@
 package Zion;
 
-public class Video extends VideoLists implements Comparable<Video>{
+public class Video implements Comparable<Video>{
     String title;
     double durationInMinutes;
     int views;
@@ -79,11 +79,11 @@ public class Video extends VideoLists implements Comparable<Video>{
     @Override
     public String toString() {
         return
-                "Title: " + "\"" + title + "\""+
+                "\n----------------\nTitle: " + "\"" + title + "\""+
                 "\nDurationInMinutes: " + durationInMinutes +
                 "\nViews: " + views +
                 "\nLikes: " + likes +
-                "\nWatchTime: " + watchTime;
+                "\nWatchTime: " + watchTime + "\n----------------";
     }
 
 }
