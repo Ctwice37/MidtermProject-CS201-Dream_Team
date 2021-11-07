@@ -41,12 +41,6 @@ public class JavaTube {
             }
 
 
-
-
-
-        }
-
-
     public void videoPrinter(Video[] arr) {
         for(Video v : arr)
             System.out.println(v);
@@ -128,9 +122,16 @@ public class JavaTube {
             public int compare(CookingVideo o1, CookingVideo o2) {
                 return -1 * (o1.getCookingRecipe().getServings() - o2.getCookingRecipe().getServings());
             }
-
-
-
         });
+
+
+        //////////////Use custom VideoList Class ////////////////////////
+        VideoList list = new VideoList();
+        for(Video v : gamingVideos)
+            list.add(v);
+        for(Video v : cookingVideos)
+            list.add(v);
+
+        System.out.println(list.toString());
     }
 }

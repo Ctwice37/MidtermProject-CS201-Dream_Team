@@ -12,8 +12,8 @@ public class VideoList {
     }
 
     public void add(Video o) {
-        if (videos[(size - 1)] != null)
-            resize();
+        if(videos[videos.length] != null)
+        resize();
         for (int i = 0; i < this.size(); i++) {
             if (videos[i] == null) {
                 videos[i] = o;
@@ -27,18 +27,24 @@ public class VideoList {
     }
 
     private Video[] resize() {
-        Video[] v1 = new Video[videos.length * 2];
-        int i = 0;
-        for (Video v : videos) {
-            v1[i] = v;
-            i++;
-        }
-        return v1;
+        Video[] v2 = null;
+        if (size == videos.length - 1) {
+             Video[] v1 = new Video[videos.length * 2];
+            int i = 0;
+            for (Video v : videos) {
+                v1[i] = v;
+                i++;
+            }v2 = v1;
+
+        }return v2;
     }
-//
-//    @Override
-//    public String toString() {
-//        for (Video v : videos)
-//            return v +"\n-----------------------";
-//}
+
+
+    @Override
+    public String toString() {
+        String y = "";
+        for (Video v : videos)
+             y += v;
+        return y;
+    }
 }
