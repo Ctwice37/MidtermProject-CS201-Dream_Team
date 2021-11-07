@@ -17,27 +17,29 @@ public class CookingVideo extends Video implements CookingVideos{
 
     @Override
     public String[] getIngredientsList() {
-        String ingredients = getCookingRecipe().getIngredients();
-        return ingredients.split(ingredients, ',');
+        String ingredients = this.getCookingRecipe().getIngredients();
+        String[] items = ingredients.split(",");
+
+        return items;
 
 
     }
 
     @Override
     public Recipe getCookingRecipe() {
-        return this.recipe;
+        return recipe;
     }
 
     @Override
     public void printRecipe() {
-        Recipe r = getCookingRecipe();
-        String[] ingredients = getIngredientsList();
+        Recipe r = this.getCookingRecipe();
+        String[] ingredients = this.getIngredientsList();
 
-        System.out.println("Dish: " + r.getRecipeName() +"\n Ingredients: \n" );
+        System.out.println("\n\n----------------------\nDish: *" + r.getRecipeName() + "*" +"\n\nIngredients: " );
         for(String s : ingredients)
-            System.out.println(s);
-        System.out.println("Instructions: "+ r.getInstructions() + "\nPrep Time: "+ r.getPrepTime() +
-                "\nCook Time: " + r.getCookTime() + "\nServings: " + r.getServings());
+            System.out.println("-" + s);
+        System.out.println("\nInstructions: "+ r.getInstructions() + "\n\nPrep Time: "+ r.getPrepTime() +
+                "\nCook Time: " + r.getCookTime() + "\n\nServings: " + r.getServings() + "\n----------------------");
 
     }
 }

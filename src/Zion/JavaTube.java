@@ -16,7 +16,7 @@ public class JavaTube {
     }
 
 
-    public class sortVideosByViews implements Comparator<Video> {                                          //Member Inner Class
+    public static class sortVideosByViews implements Comparator<Video> {                                          //Member Inner Class
         @Override
         public int compare(Video o1, Video o2) {
             return o1.getViews() - o2.getViews();
@@ -48,23 +48,20 @@ public class JavaTube {
 
     public void printAllCookingRecipes(CookingVideo[] arr){
         for(CookingVideo c : arr)
-            System.out.println(c.getCookingRecipe());
+            c.printRecipe();
     }
 
     public static void main(String[] args) {
 
         //////////////create <CookingVideo> && <Recipe> objects,, put Recipe objects inside CookingVideo Constructor////////////////////////
-        Recipe r1 = new Recipe("Spaghetti", "Spaghetti, Sauce, Sausage, Parmesan, mushrooms, salt, pepper", "Boil water, Saute vegetable, cook spaghetti, serve, eat", 30, 20, 5);
+        Recipe r1 = new Recipe("Spaghetti", " Spaghetti, Sauce, Sausage, Parmesan, mushrooms, salt, pepper", "Boil water, Saute vegetable, cook spaghetti, serve, eat", 30, 20, 5);
         CookingVideo c1 = new CookingVideo("How to Make Spaghetti", 5.00, 500, 400, 50000, r1);
 
-        Recipe r2 = new Recipe("PBJ", "Bread, PeanutButter, Jam", "Slather PeanutButter on Bread, Do the same With Jam, Combine halves of Bread, Eat", 4, 2, 1);
+        Recipe r2 = new Recipe("PBJ", " Bread, PeanutButter, Jam", "Slather PeanutButter on Bread, Do the same With Jam, Combine halves of Bread, Eat", 4, 2, 1);
         CookingVideo c2 = new CookingVideo("How to Make PBJ Sandwich", 2.00, 1000, 23, 40000, r2);
 
         //////////////create gaming video object////////////////////////
         GamingVideo g1 = new GamingVideo();
-
-
-
 
 
         //////////////create Array of <Video> Type, populate with all Video objects////////////////////////
@@ -83,7 +80,7 @@ public class JavaTube {
 //
 //        //////////////Print allVideos using .videoPrinter() Method////////////////////////
 //        System.out.println("\n\n****Before Sorting .....\n");
-//       JavaTube jt = new JavaTube();
+          JavaTube jt = new JavaTube();
 //       jt.videoPrinter(allVideos);
 //
 //        Arrays.sort(allVideos);                                 //**Sorts according to watchTime**, using the @Override Comparable method, defined in Video Class
@@ -99,9 +96,9 @@ public class JavaTube {
 //
 //        jt.videoPrinter(allVideos);
 //
-//        //////////////Member Inner Class -- Comparator Interface -- (SortByViews) ////////////////////////
+//        //////////////Static Inner Class -- Comparator Interface -- (SortByViews) ////////////////////////
 //
-//        JavaTube.sortVideosByViews sortByViews = jt.new sortVideosByViews();
+//        JavaTube.sortVideosByViews sortByViews = new sortVideosByViews();
 //
 //        Arrays.sort(allVideos, sortByViews);
 //
@@ -124,18 +121,25 @@ public class JavaTube {
 //            }
 //        });
 //
+        //////////////printAllCookingVideosMethod////////////////////////
 
-        //////////////Use custom VideoList Class ////////////////////////
-          VideoList list = new VideoList();
+        jt.printAllCookingRecipes(cookingVideos);
+
+//        //////////////Use custom VideoList Class ////////////////////////
+//          VideoList list = new VideoList();
 //        for(Video v : gamingVideos)
 //            list.add(v);
 //        for(Video v : cookingVideos)
 //            list.add(v);
-        list.add(c1);
-        list.add(c2);
-        list.add(g1);
+//
+//        //Print VideoList using a <VideoList> toString() method which concatenates output from <Video> toString() Method
+//        System.out.println(list);
+//
+//
+//        JavaTube.sortVideosByViews sv = new sortVideosByViews();
+//        //Sort By Views
+//        Arrays.sort(list.getVideo(), sv);
 
 
-        System.out.println(list);
     }
 }

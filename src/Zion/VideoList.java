@@ -13,8 +13,9 @@ public class VideoList {
     public void add(Video o){
         resize();
         for (int i = 0; i < video.length; i++) {
-            if(video[i] == null)
+            if(video[i] == null){
                 video[i] = o;
+                break;}
             size++;
         }
     }
@@ -34,12 +35,18 @@ public class VideoList {
 
     @Override
     public String toString() {
-      int size = ,m
-      String x = "";
-      Video[] y = video;
-      for(Video video : y)
-          x +=video;
-      return x;
+        String y = "";
+        for (Video v: video){
+            if(v == null)
+                break;
+
+            y += v;}
+
+        return y;
+    }
+
+    public Video[] getVideo() {
+        return video;
     }
 }
 

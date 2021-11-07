@@ -90,10 +90,10 @@ public class Video implements Comparable<Video>{
     public String toString() {
         return
                 "Title: " + "\"" + title + "\""+
-                "DurationInMinutes: " + durationInMinutes +
-                "Views: " + views +
-                "Likes: " + likes +
-                "WatchTime: " + watchTime;
+                " DurationInMinutes: " + durationInMinutes +
+                " Views: " + views +
+                " Likes: " + likes +
+                " WatchTime: " + watchTime;
     }
 
 }
