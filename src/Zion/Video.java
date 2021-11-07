@@ -76,14 +76,24 @@ public class Video implements Comparable<Video>{
         }return -1;
     }
 
-    @Override
+//    @Override
+//    public String toString() {
+//        return
+//                "\n----------------\nTitle: " + "\"" + title + "\""+
+//                "\nDurationInMinutes: " + durationInMinutes +
+//                "\nViews: " + views +
+//                "\nLikes: " + likes +
+//                "\nWatchTime: " + watchTime + "\n----------------";
+//    }
+
+        @Override
     public String toString() {
         return
-                "\n----------------\nTitle: " + "\"" + title + "\""+
-                "\nDurationInMinutes: " + durationInMinutes +
-                "\nViews: " + views +
-                "\nLikes: " + likes +
-                "\nWatchTime: " + watchTime + "\n----------------";
+                "Title: " + "\"" + title + "\""+
+                "DurationInMinutes: " + durationInMinutes +
+                "Views: " + views +
+                "Likes: " + likes +
+                "WatchTime: " + watchTime;
     }
 
 }

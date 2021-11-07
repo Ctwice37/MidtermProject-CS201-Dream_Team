@@ -76,62 +76,66 @@ public class JavaTube {
         //////////////create Array of <GamingVideo> Type, populate with all VideoGames objects////////////////////////
 
         GamingVideo[] gamingVideos = new GamingVideo[]{g1};
-
-
-
-
-
-        //////////////Print allVideos using .videoPrinter() Method////////////////////////
-        System.out.println("\n\n****Before Sorting .....\n");
-       JavaTube jt = new JavaTube();
-       jt.videoPrinter(allVideos);
-
-        Arrays.sort(allVideos);                                 //**Sorts according to watchTime**, using the @Override Comparable method, defined in Video Class
-
-        System.out.println("\n\n.....After Arrays.sort(), (using watchTime as the criteria) \n\n");
-        jt.videoPrinter(allVideos);
-
-
-        //////////////Member Inner Class -- Comparator Interface -- (SortByTitle) ////////////////////////
-        JavaTube.sortVideosByTitle sortByTitle = jt.new sortVideosByTitle();
-
-        Arrays.sort(allVideos, sortByTitle);
-
-        jt.videoPrinter(allVideos);
-
-        //////////////Member Inner Class -- Comparator Interface -- (SortByViews) ////////////////////////
-
-        JavaTube.sortVideosByViews sortByViews = jt.new sortVideosByViews();
-
-        Arrays.sort(allVideos, sortByViews);
-
-        //////////////Local Inner Class -- Comparator Interface -- (SortBy_IngredientList) ////////////////////////
-
-
-        JavaTube j = new JavaTube();                        //MainClass
-
-       j.printByIngredientList(cookingVideos);
-
-
-
-        //////////////Anonymous Inner Class -- Comparator Interface -- (SortBy_ServingSize_Descending) ////////////////////////
-
-        Arrays.sort(cookingVideos, new Comparator<CookingVideo>() {
-
-            @Override
-            public int compare(CookingVideo o1, CookingVideo o2) {
-                return -1 * (o1.getCookingRecipe().getServings() - o2.getCookingRecipe().getServings());
-            }
-        });
-
+//
+//
+//
+//
+//
+//        //////////////Print allVideos using .videoPrinter() Method////////////////////////
+//        System.out.println("\n\n****Before Sorting .....\n");
+//       JavaTube jt = new JavaTube();
+//       jt.videoPrinter(allVideos);
+//
+//        Arrays.sort(allVideos);                                 //**Sorts according to watchTime**, using the @Override Comparable method, defined in Video Class
+//
+//        System.out.println("\n\n.....After Arrays.sort(), (using watchTime as the criteria) \n\n");
+//        jt.videoPrinter(allVideos);
+//
+//
+//        //////////////Member Inner Class -- Comparator Interface -- (SortByTitle) ////////////////////////
+//        JavaTube.sortVideosByTitle sortByTitle = jt.new sortVideosByTitle();
+//
+//        Arrays.sort(allVideos, sortByTitle);
+//
+//        jt.videoPrinter(allVideos);
+//
+//        //////////////Member Inner Class -- Comparator Interface -- (SortByViews) ////////////////////////
+//
+//        JavaTube.sortVideosByViews sortByViews = jt.new sortVideosByViews();
+//
+//        Arrays.sort(allVideos, sortByViews);
+//
+//        //////////////Local Inner Class -- Comparator Interface -- (SortBy_IngredientList) ////////////////////////
+//
+//
+//        JavaTube j = new JavaTube();                        //MainClass
+//
+//       j.printByIngredientList(cookingVideos);
+//
+//
+//
+//        //////////////Anonymous Inner Class -- Comparator Interface -- (SortBy_ServingSize_Descending) ////////////////////////
+//
+//        Arrays.sort(cookingVideos, new Comparator<CookingVideo>() {
+//
+//            @Override
+//            public int compare(CookingVideo o1, CookingVideo o2) {
+//                return -1 * (o1.getCookingRecipe().getServings() - o2.getCookingRecipe().getServings());
+//            }
+//        });
+//
 
         //////////////Use custom VideoList Class ////////////////////////
-        VideoList list = new VideoList();
-        for(Video v : gamingVideos)
-            list.add(v);
-        for(Video v : cookingVideos)
-            list.add(v);
+          VideoList list = new VideoList();
+//        for(Video v : gamingVideos)
+//            list.add(v);
+//        for(Video v : cookingVideos)
+//            list.add(v);
+        list.add(c1);
+        list.add(c2);
+        list.add(g1);
 
-        System.out.println(list.toString());
+
+        System.out.println(list);
     }
 }
