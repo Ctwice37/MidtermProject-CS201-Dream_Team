@@ -46,10 +46,12 @@ public class VideoList {
     }
 
     public Video[] getVideo() {
-        Video[] temp = new Video[video.length];
-        for(Video v : video)
 
-        return video;
+        Video[] temp = new Video[size()];
+        for (int i = 0; i < size(); i++) {
+            temp[i] = video[i];
+        }return temp;
+
     }
 }
 
