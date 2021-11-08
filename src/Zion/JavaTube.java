@@ -1,7 +1,5 @@
 package Zion;
 
-;
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Comparator;
 
@@ -123,22 +121,22 @@ public class JavaTube {
 //
         //////////////printAllCookingVideosMethod////////////////////////
 
-        jt.printAllCookingRecipes(cookingVideos);
+        //jt.printAllCookingRecipes(cookingVideos);
 
 //        //////////////Use custom VideoList Class ////////////////////////
-//          VideoList list = new VideoList();
-//        for(Video v : gamingVideos)
-//            list.add(v);
-//        for(Video v : cookingVideos)
-//            list.add(v);
-//
-//        //Print VideoList using a <VideoList> toString() method which concatenates output from <Video> toString() Method
-//        System.out.println(list);
-//
-//
-//        JavaTube.sortVideosByViews sv = new sortVideosByViews();
-//        //Sort By Views
-//        Arrays.sort(list.getVideo(), sv);
+          VideoList list = new VideoList();
+        for(Video v : gamingVideos)
+            list.add(v);
+        for(Video v : cookingVideos)
+            list.add(v);
+
+        //Print VideoList using a <VideoList> toString() method which concatenates output from <Video> toString() Method
+        System.out.println(list);
+
+
+        JavaTube.sortVideosByViews sv = new sortVideosByViews();
+        //Sort By Views
+        Arrays.sort(list.getVideo(), sv);
 
 
     }

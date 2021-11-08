@@ -13,8 +13,8 @@ public class VideoList {
     public void add(Video o){
         resize();
         for (int i = 0; i < video.length; i++) {
-            if(video[i] == null){
-                video[i] = o;
+            if(video[size] == null){
+                video[size] = o;
                 break;}
             size++;
         }
@@ -46,6 +46,9 @@ public class VideoList {
     }
 
     public Video[] getVideo() {
+        Video[] temp = new Video[video.length];
+        for(Video v : video)
+
         return video;
     }
 }
