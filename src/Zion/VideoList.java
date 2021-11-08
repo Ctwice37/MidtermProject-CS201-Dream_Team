@@ -50,7 +50,7 @@ public class VideoList {
         Video[] temp = new Video[size()];
         for (int i = 0; i < size(); i++) {
             temp[i] = video[i];
-        }return temp;
+        } return temp;
 
     }
 }
